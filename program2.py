@@ -23,15 +23,15 @@ class Solution:
             dfs(r, c-1)  # left
             dfs(r, c+1)  # right
         
-        # Count the number of distinct islands
+        # Count the number of distinct i
         island_count = 0
         for r in range(rows):
             for c in range(cols):
-                # If the current cell is land ('L') and hasn't been visited, it's a new island
+                
                 if grid[r][c] == 'L' and not visited[r][c]:
-                    # Perform DFS to mark all parts of this island
+                    
                     dfs(r, c)
-                    # Increment the island count
+                    
                     island_count += 1
         
         return island_count
